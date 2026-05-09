@@ -78,6 +78,7 @@ body{
 
 
 /* ===== Pinterest Layout Background ===== */
+/* ===== Pinterest Layout Background ===== */
 .boxes{
     column-count:3;
     column-gap:20px;
@@ -97,7 +98,12 @@ body{
 
 /* ===== Glass Box ===== */
 .box{
-    display:block;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
     break-inside:avoid;
     margin-bottom:20px;
     padding:40px 20px;
@@ -127,6 +133,42 @@ body{
     transition:all 0.3s ease;
 }
 
+/* ===== Images Inside Boxes ===== */
+.box img{
+    
+    height:auto;
+    object-fit:contain;
+    position:relative;
+    z-index:2;
+}
+
+/* ===== Text ===== */
+.box span{
+    position:relative;
+    z-index:2;
+}
+
+/* ===== Individual Image Sizes ===== */
+.img1{
+    width:150px;
+}
+
+.img2{
+    width:180px;
+}
+
+.img3{
+    width:300px;
+}
+
+.img4{
+    width:150px;
+}
+
+.img5{
+    width:200px;
+}
+
 /* ===== Shine Layer ===== */
 .box::before{
     content:"";
@@ -151,6 +193,7 @@ body{
 /* ===== Hover Effects ===== */
 .box:hover{
     transform:translateY(-8px) scale(1.02);
+
     box-shadow:
         0 15px 30px rgba(0,0,0,0.45),
         inset 0 1px 2px rgba(255,255,255,0.5);
@@ -166,16 +209,32 @@ body{
     0%{
         transform:translateX(-100%) rotate(25deg);
     }
+
     100%{
         transform:translateX(100%) rotate(25deg);
     }
 }
 
 /* ===== Box Heights (Pinterest Style) ===== */
-.box1{height:150px;}
-.box2{height:220px;}
-.box3{height:180px;}
-.box4{height:260px;}
+.box1{
+    height:150px;
+}
+
+.box2{
+    height:220px;
+}
+
+.box3{
+    height:180px;
+}
+
+.box4{
+    height:260px;
+}
+
+.box5{
+    height:200px;
+}
 /*======= socials ======= */
 
 /* Section */
