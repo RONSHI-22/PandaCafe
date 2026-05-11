@@ -158,15 +158,19 @@ body{
 }
 
 .img3{
-    width:300px;
+    width:450px;
+    margin-top: -60px;
 }
 
 .img4{
-    width:150px;
+    width:250px;
+    margin-top: 60px;
+    margin-left: -125px;
 }
 
 .img5{
-    width:200px;
+    width:350px;
+    margin-top: -60px;
 }
 
 /* ===== Shine Layer ===== */
