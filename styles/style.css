@@ -856,3 +856,12 @@ footer .soc{
         height:20px;
     }
 }
+
+.welcome1,
+.boxes,
+.socials,
+.whatWeDo,
+footer{
+    max-width:1400px;
+    margin:auto;
+}
