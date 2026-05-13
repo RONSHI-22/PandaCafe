@@ -1,0 +1,117 @@
+body{
+    background: #da0d0d;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Image + checkbox beside each other */
+.top-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    margin-top: 100px;
+}
+
+/* Image */
+.img1 img{
+    width: 250px;
+    border-radius: 15px;
+}
+
+/* Checkbox */
+.checkbox{
+    font-size: 20px;
+    max-width: 300px;
+}
+
+/* Hidden rules */
+.therules{
+    display: none;
+
+    text-align: center;
+    margin-top: 40px;
+
+    background: #222;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 25px;
+    border-radius: 15px;
+}
+
+/* Show rules */
+.therules.show{
+    display: block;
+}
+
+.r1{
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+/* Container */
+.custom-check{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+}
+
+/* Hide default checkbox */
+.custom-check input{
+    display: none;
+}
+
+/* Custom box */
+.checkmark{
+    width: 25px;
+    height: 25px;
+
+    border: 3px solid #ff4444;
+    border-radius: 8px;
+
+    background: transparent;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+/* When checked */
+.custom-check input:checked + .checkmark{
+    background: #ff4444;
+    box-shadow: 0 0 10px #ff4444;
+}
+
+/* Check icon */
+.checkmark::after{
+    content: "";
+
+    position: absolute;
+
+    left: 7px;
+    top: 2px;
+
+    width: 6px;
+    height: 12px;
+
+    border: solid white;
+    border-width: 0 3px 3px 0;
+
+    transform: rotate(45deg);
+
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+/* Show check */
+.custom-check input:checked + .checkmark::after{
+    opacity: 1;
+}
