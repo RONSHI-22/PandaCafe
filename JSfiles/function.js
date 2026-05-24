@@ -1,13 +1,15 @@
-const checkbox = document.getElementById("agreeBox");
-const rulesBox = document.getElementById("rulesBox");
+document.addEventListener("DOMContentLoaded", function () {
 
-checkbox.addEventListener("change", function(){
+    const lo = document.getElementById("lo");
 
-    if(checkbox.checked){
-        rulesBox.classList.add("show");
-    }
-    else{
-        rulesBox.classList.remove("show");
-    }
+    lo.addEventListener("click", function () {
+
+        document.body.classList.add("fade-out");
+
+        setTimeout(function () {
+            window.location.href = "../index.html";
+        }, 500);
+
+    });
 
 });
