@@ -14,88 +14,91 @@
 <body>
     <script src="../JSfiles/function.js"></script>
     <header>
-        <div class="logo">
-            <h1 id="lo">Panda Cafe</h1>
-        </div>
+        <h1 id="lo">Panda Cafe</h1>
     </header>
 
-    <main>
-        <div class="t1">
-            <h2>History</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-        <div class="t2">
-            <h2>Whos the founder</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-        <div class="t3">
-            <h2>Owners</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-        <div class="t4">
-            <h2>Why it was created?</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and 
-            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<main>
+
+    <div class="top">
+        <h1>What is PandaCafe?</h1>
+        <p>
+            PandaCafe is a community server where players can meet friends,
+            enjoy fun events, and have an amazing gaming experience.
+        </p>
+    </div>
+
+    <!-- LEFT -->
+
+    <div class="leftInfoBox">
+
+        <div class="infoBox" data-title="Friendly Community"
+        data-info="Meet friendly players and enjoy a welcoming environment.">
+            <h2>Community</h2>
         </div>
 
-        <div class="t5">
-            <h2>Whats the goal?</h2>
-            <p>Lorem t to make but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <div class="infoBox" data-title="Amazing Events"
+        data-info="Participate in weekly events and win awesome prizes.">
+            <h2>Events</h2>
         </div>
 
-        
-        <div class="t6">
-            <h2>Whats the goal?</h2>
-            <p>Lorem t to make but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </div>
-    </main>
-
-    
-<footer>
-    <div class="footer-container">
-
-        <!-- Get in touch -->
-        <div class="footer-box">
-            <h3>PandaCafe</h3>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-            </p>
-        </div>
-
-        <!-- Social links -->
-        <div class="footer-box">
-            <h3 class="soc">Social Links</h3>
-
-                <div class="social-icons">
-                    <a href="#" class="icon">
-                        <img src="../Pictures/tiktok (1).png" alt="">
-                    </a>
-
-                    <a href="#" class="icon">
-                        <img src="../Pictures/facebook.png" alt="">
-                    </a>
-
-                    <a href="#" class="icon">
-                        <img src="../Pictures/instagram.png" alt="">
-                    </a>
-                </div>
-        </div>
-
-        <!-- New section -->
-        <div class="footer-box">
-            <h3>Other Links</h3>
-            <ul class="footer-links">
-                <li><a href="https://confession-web-88ol.onrender.com/">Confession Web</a></li>
-                <li><a href="#">Tiktok Shop</a></li>
-                <li><a href="">Discord</a></li>
-            </ul>
+        <div class="infoBox" data-title="Rewards"
+        data-info="Earn coins, ranks and exclusive rewards while playing.">
+            <h2>Rewards</h2>
         </div>
 
     </div>
-</footer>
+
+    <!-- CENTER -->
+
+    <div class="pandaAnimation"></div>
+
+    <!-- RIGHT -->
+
+    <div class="rightInfoBox">
+
+        <div class="infoBox"
+        data-title="Custom Features"
+        data-info="Enjoy custom plugins and unique gameplay.">
+
+            <h2>Features</h2>
+
+        </div>
+
+        <div class="infoBox"
+        data-title="Friendly Staff"
+        data-info="Our staff team is always ready to help players.">
+
+            <h2>Support</h2>
+
+        </div>
+
+        <div class="infoBox"
+        data-title="Join Us"
+        data-info="Become part of PandaCafe today and start your adventure.">
+
+            <h2>Join</h2>
+
+        </div>
+
+    </div>
+
+</main>
+
+<!-- POPUP -->
+
+<div id="popup" class="popup">
+
+    <div class="popupContent">
+
+        <span id="closePopup">&times;</span>
+
+        <h2 id="popupTitle"></h2>
+
+        <p id="popupText"></p>
+
+    </div>
+
+</div>
+
 </body>
 </html>
