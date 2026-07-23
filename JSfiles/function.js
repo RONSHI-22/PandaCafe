@@ -59,4 +59,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+
+// ===========================
+// Owners / Mods Toggle
+// ===========================
+
+const button = document.getElementById("toggleBtn");
+const owners = document.getElementById("ownersSection");
+const mods = document.getElementById("modsSection");
+const pageTitle = document.getElementById("title");
+
+if (button && owners && mods && pageTitle) {
+
+    let showingOwners = true;
+
+    button.addEventListener("click", function () {
+
+        const current = showingOwners ? owners : mods;
+        const next = showingOwners ? mods : owners;
+
+        // Fade out current section
+        current.classList.add("fade-out");
+
+        setTimeout(function () {
+
+            current.classList.add("hidden");
+            current.classList.remove("fade-out");
+
+            next.classList.remove("hidden");
+
+            // Start faded
+            next.classList.add("fade-out");
+
+            // Trigger fade in
+            setTimeout(function () {
+                next.classList.remove("fade-out");
+            }, 10);
+
+            if (showingOwners) {
+                pageTitle.textContent = "MEET THE MODS";
+                button.textContent = "SEE OWNERS";
+            } else {
+                pageTitle.textContent = "MEET THE OWNERS";
+                button.textContent = "SEE MODS";
+            }
+
+            showingOwners = !showingOwners;
+
+        }, 500);
+
+    });
+
+}
 });
+
+

@@ -410,3 +410,120 @@ header h1{
     }
 
 }
+
+footer{
+    background:#5C0000;
+    padding:40px 20px;
+    text-align: center;
+}
+footer .soc{
+    text-align: center;
+}
+/* Main container (3 columns) */
+.footer-container{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap; /* makes it responsive */
+    color:white;
+}
+
+/* Each section */
+.footer-box{
+    flex:1;
+    min-width:220px;
+}
+
+/* Titles */
+.footer-box h3{
+    font-size:25px;
+    margin-bottom:10px;
+    letter-spacing:2px;
+    margin-bottom:20px;
+    letter-spacing:2px;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 
+    0 5px 10px #B22222,
+    0 5px 10px #B22222,
+    0 5px 10px #B22222;
+}
+
+/* Text */
+.footer-box p{
+    font-size:14px;
+    color:#ffd6d6;
+    line-height:1.6;
+}
+
+/* Social icons */
+.social-icons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+/* circle buttons */
+.icon{
+    width:45px;
+    height:45px;
+    background:#8B0000;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:0.3s ease;
+    text-decoration:none;
+}
+
+/* fix image size */
+.icon img{
+    width:22px;
+    height:22px;
+    object-fit:contain;
+}
+
+/* hover effect */
+.icon:hover{
+    background:#ff4d4d;
+    transform:translateY(-5px) scale(1.1);
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Other links */
+.footer-links{
+    list-style:none;
+    padding:0;
+}
+
+.footer-links li{
+    margin:8px 0;
+}
+
+.footer-links a{
+    color:#ffd6d6;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.footer-links a:hover{
+    color:white;
+    padding-left:5px;
+}
+
+
+/* FADE OUT */
+.fade-out{
+    animation:fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeOut{
+    from{
+        opacity:1;
+    }
+
+    to{
+        opacity:0;
+    }
+}
