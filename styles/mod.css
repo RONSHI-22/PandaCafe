@@ -1,3 +1,7 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
 *{
     margin:0;
     padding:0;
@@ -5,111 +9,448 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
-body{
-    background:#202020;
-    color:white;
+html{
+    scroll-behavior:smooth;
 }
+
+body{
+    background:
+        linear-gradient(rgba(20,0,0,.85), rgba(20,0,0,.9)),
+        url("../Pictures/rainybg.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:white;
+    min-height:100vh;
+}
+
+/* ===========================
+   HEADER
+=========================== */
 
 header{
     text-align:center;
-    padding:30px;
+    padding:40px 20px;
 }
 
-.change{
+header h1{
+    font-size:3rem;
+    color:#e6dada;
+    text-shadow:
+        0 0 5px #ff4d4d,
+        0 0 10px #ff4d4d,
+        0 0 20px #ff0000,
+        0 0 40px #ff0000;
+    letter-spacing:2px;
+}
+
+/* ===========================
+   BACK BUTTON
+=========================== */
+
+#lo{
+    display:inline-block;
     margin-top:20px;
+    cursor:pointer;
+
+    font-size:2rem;
+    font-family:"Brush Script MT", cursive;
+    color:#ff5c5c;
+
+    transition:.3s ease;
+
+    text-shadow:
+        0 0 5px #ff4d4d,
+        0 0 10px #ff4d4d,
+        0 0 20px #ff0000,
+        0 0 35px #ff0000;
+}
+
+#lo:hover{
+    color:white;
+    transform:scale(1.08);
+
+    text-shadow:
+        0 0 10px #fff,
+        0 0 20px #ff4d4d,
+        0 0 40px red,
+        0 0 60px red;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.change{
+    margin-top:25px;
 }
 
 .change button{
-    padding:12px 25px;
+    padding:14px 30px;
     border:none;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:16px;
-    background:#ff4040;
+    border-radius:10px;
+
+    background:linear-gradient(135deg,#ff4d4d,#a00000);
+
     color:white;
+    font-size:17px;
+    cursor:pointer;
+
     transition:.3s;
+    box-shadow:0 0 20px rgba(255,0,0,.35);
 }
 
 .change button:hover{
-    background:#d60000;
+
+    transform:translateY(-4px);
+
+    background:linear-gradient(135deg,#ff7777,#d10000);
+
+    box-shadow:
+        0 0 15px red,
+        0 0 35px rgba(255,0,0,.7);
+
 }
 
+/* ===========================
+   MAIN
+=========================== */
+
 main{
-    width:90%;
-    max-width:1000px;
+    width:92%;
+    max-width:1200px;
     margin:40px auto;
 }
+
+/* ===========================
+   OWNER SECTION
+=========================== */
 
 .owners{
     display:flex;
     flex-direction:column;
-    gap:25px;
+    gap:30px;
+
+    opacity:1;
+    transition:opacity .5s ease;
 }
 
-.card{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:#2d2d2d;
-    padding:20px;
-    border-radius:15px;
-}
-
-.info{
-    width:70%;
-}
-
-.card h2{
-    font-size:32px;
-}
-
-.card h3{
-    margin:10px 0;
-    color:#ff6666;
-}
-
-.card p{
-    line-height:1.6;
-}
-
-.card img{
-    width:200px;
-    height:200px;
-    border-radius:15px;
-    object-fit:cover;
-    background:#555;
+.fade-out{
+    opacity:0;
 }
 
 .hidden{
     display:none;
 }
 
-@media(max-width:768px){
+/* ===========================
+   CARD
+=========================== */
+
+.card{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+
+    background:rgba(70,0,0,.55);
+
+    border:1px solid rgba(255,70,70,.3);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    transition:.35s;
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 0 20px rgba(255,0,0,.4),
+        0 0 40px rgba(255,0,0,.2);
+
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.info{
+    flex:1;
+}
+
+.card h2{
+
+    font-size:2.2rem;
+
+    color:#ff5c5c;
+
+    margin-bottom:10px;
+
+    text-shadow:
+        0 0 5px #ff0000,
+        0 0 10px #ff0000;
+
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+    color:#ff9999;
+
+    font-size:1.2rem;
+
+}
+
+.card p{
+
+    line-height:1.8;
+
+    color:#f2f2f2;
+
+    font-size:1rem;
+
+}
+
+/* ===========================
+   IMAGE
+=========================== */
+
+.card img{
+
+    width:220px;
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    border:4px solid #ff4444;
+
+    box-shadow:
+        0 0 15px rgba(255,0,0,.4),
+        0 0 30px rgba(255,0,0,.2);
+
+    transition:.4s;
+
+}
+
+.card img:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+        0 0 20px red,
+        0 0 40px red;
+
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media(max-width:900px){
 
     .card{
+
         flex-direction:column-reverse;
+
         text-align:center;
+
+    }
+
+    .card img{
+
+        width:200px;
+        height:200px;
+
     }
 
     .info{
         width:100%;
     }
 
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:2.2rem;
+    }
+
+    #lo{
+        font-size:1.6rem;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    .card h2{
+        font-size:1.8rem;
+    }
+
+    .card h3{
+        font-size:1rem;
+    }
+
+    .card p{
+        font-size:.95rem;
+    }
+
     .card img{
-        margin-bottom:20px;
+
+        width:170px;
+        height:170px;
+
+    }
+
+    .change button{
+
+        width:100%;
+
+        max-width:300px;
+
+        font-size:16px;
+
     }
 
 }
 
-.owners {
-    opacity: 1;
-    transition: opacity 0.5s ease;
+/* ===========================
+   VERY SMALL PHONES
+=========================== */
+
+@media(max-width:400px){
+
+    header h1{
+        font-size:1.8rem;
+    }
+
+    .card h2{
+        font-size:1.5rem;
+    }
+
+    .card img{
+
+        width:150px;
+        height:150px;
+
+    }
+
 }
 
-.fade-out {
-    opacity: 0;
+
+/* Footer */
+/* Footer */
+footer{
+    background:#5C0000;
+    padding:40px 20px;
+    text-align: center;
+}
+footer .soc{
+    text-align: center;
+}
+/* Main container (3 columns) */
+.footer-container{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap; /* makes it responsive */
+    color:white;
 }
 
-.hidden {
-    display: none;
+/* Each section */
+.footer-box{
+    flex:1;
+    min-width:220px;
+}
+
+/* Titles */
+.footer-box h3{
+    font-size:25px;
+    margin-bottom:10px;
+    letter-spacing:2px;
+    margin-bottom:20px;
+    letter-spacing:2px;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 
+    0 5px 10px #B22222,
+    0 5px 10px #B22222,
+    0 5px 10px #B22222;
+}
+
+/* Text */
+.footer-box p{
+    font-size:14px;
+    color:#ffd6d6;
+    line-height:1.6;
+}
+
+/* Social icons */
+.social-icons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+/* circle buttons */
+.icon{
+    width:45px;
+    height:45px;
+    background:#8B0000;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:0.3s ease;
+    text-decoration:none;
+}
+
+/* fix image size */
+.icon img{
+    width:22px;
+    height:22px;
+    object-fit:contain;
+}
+
+/* hover effect */
+.icon:hover{
+    background:#ff4d4d;
+    transform:translateY(-5px) scale(1.1);
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Other links */
+.footer-links{
+    list-style:none;
+    padding:0;
+}
+
+.footer-links li{
+    margin:8px 0;
+}
+
+.footer-links a{
+    color:#ffd6d6;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.footer-links a:hover{
+    color:white;
+    padding-left:5px;
 }
