@@ -1,12 +1,89 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PANDAS PET</title>
+
+    <title>PandaCafe | Panda's Pets</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/Pets.css">
+
+    <!-- JavaScript -->
+    <script src="/JSfiles/pet.js" defer></script>
 </head>
 <body>
-    <h1>SOON THIS WILL BE ADDED BY RONSHI</h1>
-    <h3>tinatamad ako ahaha</h3>
+
+    <header class="header">
+        <h2>PandaCafe</h2>
+        <p>Meet our adorable pets!</p>
+    </header>
+
+    <main class="pet-container">
+
+        <!-- LEFT SIDE: PET SELECTION -->
+        <section class="pet-selection">
+            <h1>PANDA'S PETS</h1>
+            <p class="subtitle">Choose your favorite pet</p>
+
+            <div class="pet-list">
+
+                <button class="pet-card active"
+                    data-name="Mochi"
+                    data-image="/Pictures/dog.jpeg"
+                    data-description="Meet Mochi, our adorable and playful little friend. Mochi loves spending time with visitors!">
+
+                    <img src="/Pictures/dog.jpeg" alt="Mochi">
+                    <span>Mochi</span>
+                </button>
+
+                <button class="pet-card"
+                    data-name="Bamboo"
+                    data-image="/Pictures/bunny.jpeg"
+                    data-description="Bamboo is a curious little companion who loves exploring and making new friends.">
+
+                    <img src="/Pictures/bunny.jpeg" alt="Bamboo">
+                    <span>Bamboo</span>
+                </button>
+
+                <button class="pet-card"
+                    data-name="Cookie"
+                    data-image="/Pictures/cat.jpeg"
+                    data-description="Cookie is a sweet and friendly pet who brings happiness to everyone around.">
+
+                    <img src="/Pictures/cat.jpeg" alt="Cookie">
+                    <span>Cookie</span>
+                </button>
+
+            </div>
+        </section>
+
+        <!-- RIGHT SIDE: SELECTED PET DISPLAY -->
+        <section class="pet-display">
+
+            <div class="pet-image-container">
+                <img
+                    id="mainPetImage"
+                    src="/Pictures/dog.jpeg"
+                    alt="Mochi"
+                >
+            </div>
+
+            <div class="pet-information">
+                <p class="pet-label">MEET OUR PET</p>
+
+                <h2 id="petName">Mochi</h2>
+
+                <p id="petDescription">
+                    Meet Mochi, our adorable and playful little friend.
+                    Mochi loves spending time with visitors!
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
 </body>
 </html>
